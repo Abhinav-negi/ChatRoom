@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatRoom</title>
+    <link rel="stylesheet" href="styleSs.css">
+</head>
+<body>
+    <div class="background">
+        <div class="floating-astronaut"></div>
+    </div>
+
+    <section id="landing-page" class="section active">
+        <div class="container">
+            <h1>ChatRoom</h1>
+            <p class="tagline">Create your own space</p>
+            <div class="buttons">
+                <button onclick="navigateTo('host-room')">Host a Room</button>
+                <button onclick="navigateTo('join-room')">Join a Room</button>
+                <button onclick="navigateTo('community')">Community Rooms</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="host-room" class="section hidden">
+        <div class="container">
+            <h2>Create a New Planet</h2>
+            <form id="host-room-form">
+                <label>Room Name:</label>
+                <input type="text" id="room-name" required>
+                <label>Room Password:</label>
+                <input type="password" id="room-password" required>
+                <label>Select Room Type:</label>
+                <select id="room-type">
+                    <option value="temporary">Temporary</option>
+                    <option value="permanent">Permanent</option>
+                </select>
+                <button type="submit">Launch Room</button>
+            </form>
+            <button class="go-back" onclick="navigateTo('landing-page')">Back to Home</button>
+        </div>
+    </section>
+
+    <section id="join-room" class="section hidden">
+        <div class="container">
+            <h2>Join a Planet</h2>
+            <form>
+                <label>Room Name:</label>
+                <input type="text" id="join-room-name" required>
+                <label>Room Password:</label>
+                <input type="password" id="join-room-password" required>
+                <button type="submit">Enter Planet</button>
+            </form>
+            <button class="go-back" onclick="navigateTo('landing-page')">Back to Home</button>
+        </div>
+    </section>
+
+    <section id="community" class="section hidden">
+        <div class="container">
+            <h2>Explore Communities</h2>
+            <p class="no-community" style="display: none;">Find some place to talk.</p>
+            <ul id="community-list"></ul>
+            <button class="go-back" onclick="navigateTo('landing-page')">Back to Home</button>
+        </div>
+    </section>
+
+    <div class="rocket hidden" id="rocket"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
