@@ -38,3 +38,5 @@ document.getElementById('host-room-form').addEventListener('submit', function(ev
 document.addEventListener('DOMContentLoaded', () => {
     navigateTo('landing-page');
 });
+//yo whas up
+
