@@ -40,5 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 //yo whas up
 
+
 //b1
+
+
+ 
+//b2
 
